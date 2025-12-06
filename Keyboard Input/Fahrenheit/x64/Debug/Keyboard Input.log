@@ -1,3 +1,0 @@
-﻿  Fahrenheit.c
-D:\Desktop\Visual studio projects\Keyboard Input\Fahrenheit.c(18,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Keyboard Input.vcxproj -> D:\Desktop\Visual studio projects\Keyboard Input\x64\Debug\Fahrenheit.exe
