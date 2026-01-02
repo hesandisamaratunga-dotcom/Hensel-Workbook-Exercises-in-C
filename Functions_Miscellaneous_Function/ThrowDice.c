@@ -12,9 +12,9 @@ numbers in four rows with 25 numbers each, as well as the average number rolled.
 snipped demonstrates how to generate random numbers:
 *****************************************************************************************************/
 
-//directives
+ //directives
 #define _CRT_SECURE_NO_DEPRECATE
-#define rounds = 100
+#define rounds  100
 
 #include<stdio.h>
 #include <time.h>
@@ -22,31 +22,21 @@ snipped demonstrates how to generate random numbers:
 
 
 //prototypes
-int throwDice(voidr);
+int throwDice(void);
 
-int main(void) 
+int main(void)
 {
-	int randomNumber;
-	int number = 0;
+	srand(time(NULL));
 
-	throwDice();
-	printf("%d ", randomNumber);
-
-
-
-	/*   while (randomNumber < rounds)
+	for (int i = 0; i < rounds; i++) 
 	{
-		throwDice();
-		for (randomNumber; randomNumber <= 1 && randomNumber >= 6;)
+		int rolls = throwDice();
+		printf("%d ", rolls);
+		if ((i+1)%25 == 0)
 		{
-			printf("%d ", randomNumber);
-
+			printf("\n");
 		}
-
 	}
-	
-	*/
-	
 
 	getchar();
 	return 0;
@@ -54,10 +44,7 @@ int main(void)
 
 int throwDice(void)
 {
-	int randomNumber;
-	
-	srand(time(NULL));         // Initialize random number generator
-	randomNumber = rand();     // Get next random number
+	int randomNumber = rand() % 6 + 1;    // Get next random number
 
-	return 0;
+	return randomNumber;
 }
